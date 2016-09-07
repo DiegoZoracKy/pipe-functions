@@ -1,5 +1,7 @@
 # pipe-functions
 
+[![Build Status](https://api.travis-ci.org/DiegoZoracKy/pipe-functions.svg)](https://travis-ci.org/DiegoZoracKy/pipe-functions)
+
 Pipe functions in a Unix-like style. It supports `Promises` (async) anywhere in the pipeline and every step will be executed sequentially. The *return* (*resolve* in case of `Promises`) of each function will be passed in as an argument to the next one
 
 Key features:
@@ -68,8 +70,7 @@ const fetchAndSetBandName = v => new Promise((resolve, reject) => setTimeout(() 
 
 /** Pipe **/
 // the result will be: Pink Floyd - Time
-pipe('time', capitalize, fetchAndSetBandName);
-.then(console.log)
+pipe('time', capitalize, fetchAndSetBandName).then(console.log)
 ```
 #### Example with destructuring,
 
@@ -87,6 +88,5 @@ const concatBandAndSong = ({ song, band }) => `${band} - ${song}`;
 
 /** Pipe **/
 // the result will be: Pink Floyd - Time
-pipe('time', capitalize, fetchAndSetBandName);
-.then(console.log)
+pipe('time', capitalize, fetchAndSetBandName).then(console.log)
 ```
