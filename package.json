@@ -1,0 +1,31 @@
+{
+  "name": "pipe-functions",
+  "version": "1.0.0",
+  "description": "Pipe functions in a Unix-like style. It supports Promises (async) anywhere in the pipeline and every step will be executed sequentially. The return (resolve in case of Promises) of each function will be passed in as an argument to the next one",
+  "homepage": "https://github.com/DiegoZoracKy/pipe-functions/",
+  "main": "./lib/pipe.js",
+  "author": {
+    "name": "Diego ZoracKy",
+    "email": "diego.zoracky@gmail.com",
+    "url": "https://github.com/DiegoZoracKy/"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/DiegoZoracKy/pipe-functions.git"
+  },
+  "keywords": [
+    "pipe",
+    "pipe functions",
+    "promises",
+    "sync",
+    "async"
+  ],
+  "scripts": {
+    "test": "mocha ./tests -b"
+  },
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "mocha": "^3.0.2"
+  }
+}
