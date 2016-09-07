@@ -8,6 +8,7 @@ Key features:
 - Supports `Promises`
 - `Promises` will be executed sequentially
 - First argument can be of any type (`String`, `Number`, `Date`, etc.) or even a `Function` or a `Promise`
+- Browser and Node.js ready
 
 ## Install
 
