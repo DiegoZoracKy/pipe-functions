@@ -90,5 +90,5 @@ const concatBandAndSong = ({ song, band }) => `${band} - ${song}`;
 
 /** Pipe **/
 // the result will be: Pink Floyd - Time
-pipe('time', capitalize, fetchAndSetBandName).then(console.log)
+pipe('time', fetchBandName, concatBandAndSong).then(console.log)
 ```
