@@ -12,9 +12,11 @@ Key features:
 ## Install
 
 ### NPM / Node
+
 ```javascript
 npm install pipe-functions
 ```
+
 ## Usage
 
 ### Sync
