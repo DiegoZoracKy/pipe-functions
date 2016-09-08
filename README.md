@@ -5,10 +5,11 @@
 Pipe functions in a Unix-like style. It supports `Promises` (async) anywhere in the pipeline and every step will be executed sequentially. The *return* (*resolve* in case of `Promises`) of each function will be passed in as an argument to the next one
 
 Key features:
-- Supports `Promises`
+- Supports `Promises`, or any lib following the Promises/A+ spec about being *thenable* (**.then()** method)
 - `Promises` will be executed sequentially
 - First argument can be of any type (`String`, `Number`, `Date`, etc.) or even a `Function` or a `Promise`
 - Browser and Node.js ready
+- Lightweight, **267 bytes** (190 bytes gzipped)
 
 ## Install
 
