@@ -43,6 +43,34 @@ const pipe = require('pipe-functions');
 pipe('input', fn1, fnPromise1, fn2, fnPromise2).then(console.log);
 ```
 
+A suggestion regarding `Promises`. Probably you've seen, or had to write, a stack of promises like that:
+
+```javascript
+someAsyncFunction('param')
+  .then(doSomethingWithTheResult)
+  .then(doSomethingElseWithTheResultOfTheLast)
+  .then(oneMore)
+  .then(almostThere)
+  .then(done)
+  .catch(console.log)
+```
+
+It could be written as:
+
+```javascript
+const pipe = require('pipe-functions');
+
+pipe(
+    someAsyncFunction('param'),
+    doSomethingWithTheResult,
+    doSomethingElseWithTheResultOfTheLast,
+    oneMore,
+    almostThere,
+    done
+).catch(console.log)
+```
+
+
 ## Examples
 
 OBS: Some examples needs a platform with support for *Destructuring* (Nodejs v6+, Chrome).
