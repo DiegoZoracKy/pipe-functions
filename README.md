@@ -8,7 +8,7 @@ Key features:
 - Supports `Promises`, or any lib following the Promises/A+ spec about being *thenable* (**.then()** method)
 - `Promises` will be executed sequentially
 - First argument can be of any type (`String`, `Number`, `Date`, etc.) or even a `Function` or a `Promise`
-- Browser and Node.js ready
+- Node.js and Browser ready (to be used on a Browser, without a build step, check `lib/pipe-non-es6.js`)
 - Lightweight, **267 bytes** (190 bytes gzipped)
 
 ## Install
