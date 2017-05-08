@@ -9,7 +9,7 @@ Key features:
 - `Promises` will be executed sequentially
 - First argument can be of any type (`String`, `Number`, `Date`, etc.) or even a `Function` or a `Promise`
 - Node.js and Browser ready (to be used on a Browser, without a build step, check `lib/pipe-non-es6.js`)
-- Lightweight, **267 bytes** (190 bytes gzipped)
+- Lightweight, **501 bytes**, before gzip!
 
 ## Install
 
