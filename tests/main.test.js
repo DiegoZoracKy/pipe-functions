@@ -17,6 +17,15 @@ describe('Pipe', function() {
 			assert.equal(result, `"Time"`);
 		});
 
+		it(`should pass forward 'undefined' values`, function() {
+
+			const a = () => new Promise((resolve, reject) => setTimeout(() => resolve(undefined), 1000));;
+			const b = (x) => x + undefined;
+			const c = (x) => x + 'C';
+
+			assert(pipe(a, b, c));
+		});
+
 	});
 
 	describe('Functions && Promises (sync && async)', function() {
@@ -26,6 +35,15 @@ describe('Pipe', function() {
 			pipe('time', capitalize, fetchAndSetBandName)
 				.then(result => assert.equal(`Pink Floyd - Time`, result))
 				.then(() => done());
+		});
+
+		it(`should pass forward 'undefined' values`, function() {
+
+			const a = () => undefined;
+			const b = (x) => x + undefined;
+			const c = (x) => x + 'C';
+
+			assert(pipe(a, b, c));
 		});
 
 	});

@@ -1,6 +1,6 @@
 {
   "name": "pipe-functions",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "Pipe functions in a Unix-like style. It supports Promises (async) anywhere in the pipeline and every step will be executed sequentially. The return (resolve in case of Promises) of each function will be passed in as an argument to the next one",
   "homepage": "https://github.com/DiegoZoracKy/pipe-functions/",
   "main": "./lib/pipe.js",
